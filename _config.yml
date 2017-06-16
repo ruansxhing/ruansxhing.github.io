@@ -8,27 +8,67 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+
+# Site settings
+
+# 基本信息 主要用于网站头部header
+title: 阮世兴
+brief-intro:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://ruansxhing.github.io" # the base hostname & protocol for your site
+
+permalink: /:year/:month/:day/:title/
+
+
+# 链接信息 主要用于网站底部footer
+github_username:  ruansxhing
+email: ruansxhing@gmail.com
+
+twitter_username:
+facebook_username:
+weibo_username:
+zhihu_username:
+linkedIn_username:
+dribbble_username:
+description_footer:
+
+# 评论插件
+# 两种评论插件，选一个就好了
+duoshuo_shortname:
+disqus_shortname:
+
+# 统计信息
+baidu_tongji_id:
+google_analytics_id:
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# host
+host: 0.0.0.0
+# port
+port: 8080
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# 摘要
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 5
+
+-gems:
+-  - jekyll-feed
+-exclude:
+-  - Gemfile
+-  - Gemfile.lock
