@@ -16,6 +16,8 @@
 # Site settings
 encoding: UTF-8
 safe: false
+lis: false
+keep_files:  ['.git']
 
 # 基本信息 主要用于网站头部header
 title: 阮世兴

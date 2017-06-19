@@ -4,8 +4,7 @@ layout: default
 
 <div class="page clearfix" index>
     <div class="left">
-        <h1>Welcome to HyG's Blog!</h1>
-        <small>这里记录着我的前端学习之路</small>
+        <h1>学习记录</h1>
         <hr>
         <ul>
             {% for post in paginator.posts %}
@@ -68,10 +67,12 @@ layout: default
     <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
     <div class="right">
         <div class="wrap">
+
+            <!-- 最新文章 -->
             <div class="side">
                 <div>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
+                    最新文章
                 </div>
                 <ul class="content-ul" recent>
                     {% for post in site.posts offset: 0 limit: 10  %}
@@ -80,11 +81,11 @@ layout: default
                 </ul>
             </div>
 
-            <!-- Content -->
+            <!-- 文章分类 -->
             <div class="side ">
                 <div>
                     <i class="fa fa-th-list"></i>
-                    Categories
+                    文章分类
                 </div>
                 <ul class="content-ul" cate>
                     {% for category in site.categories %}
@@ -99,11 +100,12 @@ layout: default
                     {% endfor %}
                 </ul>
             </div>
-            <!-- 其他div框放到这里 -->
+
+            <!-- 文章标签 -->
             <div class="side">
                 <div>
                     <i class="fa fa-tags"></i>
-                    Tags
+                    文章标签
                 </div>
                 <div class="tags-cloud">
                     {% assign first = site.tags.first %}
